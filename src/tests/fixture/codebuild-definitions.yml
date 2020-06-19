@@ -1,0 +1,12 @@
+# this file should be compatible to be used by AWS NodeJS SDK for StartBuild
+# sourceVersion is overridden automatically
+- name: A-Entity
+  projectName: A-Entity
+- name: A-Services
+  projectName: A-Services
+- name: B
+  projectName: B
+- name: B52
+  projectName: B52
+- name: C
+  projectName: C

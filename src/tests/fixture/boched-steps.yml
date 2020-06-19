@@ -1,0 +1,9 @@
+- name: 'no matcher step'
+  codebuild-definition: 'abc'
+# next: no name 
+- branch: 'abc'
+  codebuild-definition: 'abc'
+- name: 'no codebuild definition'
+  branch: 'abc'
+  path: 'dfd'
+- name: ''

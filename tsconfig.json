@@ -1,13 +1,18 @@
 {
     "compilerOptions": {
-        "module": "ES2020",
+        "pretty": true,
+        "sourceMap": true,
+        "module": "CommonJS",
+        "target": "ES5",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        // "paths": {
+        //   "*": ["./src"]
+        // },
         "noImplicitAny": true,
         "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "baseUrl": "./src",
-        "outDir": "./dist",
-        "pretty": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true
     },
     "include": [
       "src/**/*.ts",

@@ -1,0 +1,42 @@
+- name: A-Entity
+  path: A/Entity
+  branch: beta
+  message: \[all\]
+  branch-exclude: (stable)
+  codebuild-definition: A-Entity
+- name: A-Services
+  path: A/Services
+  branch: beta
+  message: \[all\]
+  branch-exclude: (stable)
+  codebuild-definition: A-Services
+- name: B
+  # (branch or path or message) AND branch-exclude
+  path: B
+  branch: beta
+  message: \[all\]
+  branch-exclude: (stable)
+  commands:
+    - make cs
+    - make quick-test
+  codebuild-definition: B
+- name: B52
+  # (branch or path or message) AND branch-exclude
+  path: B/B52
+  branch: beta
+  message: \[all\]
+  branch-exclude: (stable)
+  commands:
+    - make cs
+    - make quick-test
+  codebuild-definition: B52
+- name: C
+  # (branch or path or message) AND branch-exclude
+  path: "C/"
+  branch: beta
+  message: \[all\]
+  branch-exclude: (stable)
+  commands:
+    - make cs
+    - make quick-test
+  codebuild-definition: C

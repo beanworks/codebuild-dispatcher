@@ -1,0 +1,49 @@
+- name: ''
+  path: ui/classic
+  branch: somebranch
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  codebuild-definition: ui-classic
+- name: ui-espresso
+  path: ui/espresso
+  branch: somebranch
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  codebuild-definition: ui-esprosso
+- name: api-quicktest
+  # (branch or path or message) AND branch-exclude
+  path: api
+  branch: somebranch
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  commands:
+    - make cs
+    - make quick-test
+  codebuild-definition: api-large
+- name: api-func
+  path: api
+  branch: somebranch 
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  commands: 
+    - ls
+    - make test-func # 8.07m
+  codebuild-definition: api-small
+- name: api-func-core
+  path: api
+  branch: somebranch 
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  commands: 
+    - ls
+    - make test-func-core # 6.45
+  codebuild-definition: api-small
+- name: api-func-other
+  path: api
+  branch: somebranch 
+  message: \[all\]
+  branch-exclude: (master|beta|stable)
+  commands: 
+    - ls
+    - make test-func-core # 6.45
+  codebuild-definition: api-small

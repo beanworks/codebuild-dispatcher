@@ -1,0 +1,26 @@
+# this file should be compatible to be used by AWS NodeJS SDK for StartBuild
+# sourceVersion is overridden automatically
+- name: ui-classic
+  projectName: one-ui-classic-test # every 
+  buildspecOverride: buildspec-ui-classic.yml
+- name: ui-espresso
+  projectName: one-ui-espresso-test
+  buildspecOverride: buildspec-ui-espresso.yml
+- name: api-large
+  projectName: one-api-quick-test
+  buildspecOverride: buildspec-api-quick-test.yml
+  computeTypeOverride: 'BUILD_GENERAL1_LARGE'
+  environmentTypeOverride: 'LINUX_CONTAINER'
+  environmentVariablesOverride: 
+  - name: 'CI_COMMANDS'
+  - value: "some value" # TODO remove me
+- name: api-medium
+  projectName: one-api-quick-test
+  buildspecOverride: buildspec-api-quick-test.yml
+  computeTypeOverride: 'BUILD_GENERAL1_MEDIUM'
+  environmentTypeOverride: 'LINUX_CONTAINER'
+- name: api-small
+  projectName: one-api-quick-test
+  buildspecOverride: buildspec-api-quick-test.yml
+  computeTypeOverride: 'BUILD_GENERAL1_SMALL'
+  environmentTypeOverride: 'LINUX_CONTAINER'
